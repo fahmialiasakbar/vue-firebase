@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miaw</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+
+<body>
+    <h1>Hello Miaw :)</h1>
+
+    <div id="app">
+        <div v-if="show_miaw">
+            <p>{{ title }} - {{ author }} - {{ year }}</p>
+        </div>
+
+        <button v-on:click="year++">Tambah Tahun</button>
+        <button v-on:click="year--">Kurang Tahun</button>
+        <button @click="change_title('Mengadopsi Kucing')">Ganti</button>
+        <button @click="show_hide">
+            <span v-if="!show_miaw">Show Row</span>
+            <span v-else>Hide Row</span>
+        </button>
+
+        <div v-show="show_miaw">Ini lagi muncul</div>
+
+    </div>
+
+    <script src="app.js" ></script>
+</body>
+</html>
