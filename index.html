@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miaw</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
+
+    <style>
+        .box {
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: #ddd;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,6 +36,12 @@
         </button>
 
         <div v-show="show_miaw">Ini lagi muncul</div>
+
+        <br/>
+        <div class="box" @mouseover="handle_event($event, 5)">mouseover (enter)</div>
+        <div class="box" @mouseleave="handle_event">mouseleave</div>
+        <div class="box" @dblclick="handle_event">double click</div>
+        <div class="box" @mousemove="handle_mouse_move">position - {{ x }} {{ y }}</div>
 
     </div>
 
