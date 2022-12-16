@@ -15,9 +15,16 @@
 </head>
 <body>
     <div id="bookslist">
+
         <div>
             <h3>{{ store }}</h3>
             <a :href="url" target="_blank">Visit Tokopedia</a>
+        </div>
+
+        <br>
+        
+        <div v-for="miaw in filtered_books">
+            <span>{{ miaw.title }}</span>
         </div>
         <br>
         <div v-for="book in books" :class="{ bestseller: book.is_best_seller }">

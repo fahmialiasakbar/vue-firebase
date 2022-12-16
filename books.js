@@ -14,6 +14,11 @@ const app = Vue.createApp({
         toogle_best_seller(book) {
             book.is_best_seller = !book.is_best_seller
         }
+    },
+    computed: {
+        filtered_books() {
+            return this.books.filter((book) => book.is_best_seller)
+        }
     }
 });
 
