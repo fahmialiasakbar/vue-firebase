@@ -11,8 +11,8 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        toogle_best_seller(id) {
-            this.books[id].is_best_seller = !this.books[id].is_best_seller
+        toogle_best_seller(book) {
+            book.is_best_seller = !book.is_best_seller
         }
     }
 });

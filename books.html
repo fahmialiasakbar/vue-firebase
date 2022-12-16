@@ -20,15 +20,15 @@
             <a :href="url" target="_blank">Visit Tokopedia</a>
         </div>
         <br>
-        <div v-for="book, v in books" :class="{ bestseller: book.is_best_seller }">
+        <div v-for="book in books" :class="{ bestseller: book.is_best_seller }">
             <img :src="book.image" :alt="book.title" width="100">
             <br>
             <span>
-                {{ v }} {{ book.title }}
+                {{ book.title }}
             </span>
             <span>By: {{ book.author }}</span>
             <br>
-            <button @click="toogle_best_seller(v)">
+            <button @click="toogle_best_seller(book)">
                 Set Not Haiya
             </button>
             <br><br>
