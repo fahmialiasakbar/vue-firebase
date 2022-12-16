@@ -7,6 +7,11 @@
     <title>Books List</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
 
+    <style>
+        .bestseller {
+            color: rgb(184, 196, 8);
+        }
+    </style>
 </head>
 <body>
     <div id="bookslist">
@@ -15,8 +20,8 @@
             <a :href="url" target="_blank">Visit Tokopedia</a>
         </div>
         <br>
-        <div v-for="book in books">
-            <img :src="book.image" alt="" width="100">
+        <div v-for="book in books" :class="{ bestseller: book.is_best_seller }">
+            <img :src="book.image" :alt="book.title" width="100">
             <br>
             <span>
                 {{ book.title }}
